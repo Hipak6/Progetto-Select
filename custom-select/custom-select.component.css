@@ -1,0 +1,37 @@
+.select-wrapper {
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 0 10px #6a6a6a;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.select-wrapper .value-wrapper {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.select-values {
+    border-top: 1px solid gray;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.select-value-item {
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.select-value-item:hover{
+    background-color: #dcdcdc;
+}
+
+.placeholder {
+    font-size: 14px;
+    color: rgb(80, 80, 80);
+}
+
+.input-label {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
