@@ -1,6 +1,7 @@
-<div class="select-wrapper">
-    <div class="input-label">{{inputLabel}}:</div>
-    <div class="value-wrapper" (click)="showValues = !showValues">
+<div class="select-wrapper" [ngClass]="{'select-error': hasBeenTouched && value === ''}">
+    <div class="input-label" [ngClass]="{'text-danger': hasBeenTouched && value === ''}">{{inputLabel}}<span
+            *ngIf="isRequired">*</span>:</div>
+    <div class="value-wrapper" (click)="showValues = !showValues; hasBeenTouched=true;">
         <p *ngIf="value !== ''">{{value}}</p>
         <p *ngIf="value === ''" class="placeholder">{{placeholder}}</p>
     </div>
@@ -9,4 +10,7 @@
             {{item}}
         </div>
     </div>
+</div>
+<div class="error-messages">
+    <p *ngIf="hasBeenTouched && value === ''">Please select an item</p>
 </div>
